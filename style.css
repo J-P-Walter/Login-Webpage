@@ -1,0 +1,166 @@
+body {
+  background: linear-gradient(
+    90deg,
+    rgba(121, 13, 222, 1) 0%,
+    rgba(97, 9, 121, 1) 55%,
+    rgba(222, 5, 159, 1) 100%
+  );
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: content;
+  align-items: center;
+  font-family: "Montserrat Alternates", sans-serif;
+  gap: 2rem;
+  height: 95vh;
+  width: 50vw;
+}
+.header {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: content;
+  align-items: center;
+}
+.header img {
+  width: 95%;
+  object-fit: cover;
+}
+.header > h1 {
+  font-size: 50px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 2rem;
+}
+input[type="text"],
+[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border-radius: 25px;
+}
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+label:is(.checkbox) {
+  position: absolute;
+  transform: translate(0px, 4px);
+  accent-color: rgba(121, 13, 222, 1);
+}
+label:not(.checkbox) {
+  display: inline-block;
+  position: absolute;
+  transform: translate(20px, 18px);
+  background-color: white;
+}
+.form > button {
+  background: linear-gradient(
+    90deg,
+    rgba(121, 13, 222, 1) 0%,
+    rgba(97, 9, 121, 1) 55%,
+    rgba(222, 5, 159, 1) 100%
+  );
+  color: white;
+  font-family: "Montserrat Alternates", sans-serif;
+  border: none;
+  border-radius: 20px;
+  height: 3rem;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.form > button:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+.form > button:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.alt-login {
+  display: flex;
+  gap: 3rem;
+  width: 50%;
+}
+.facebook,
+.google {
+  display: flex;
+  flex: 8;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.facebook svg {
+  height: 20px;
+}
+.google svg {
+  height: 20px;
+}
+.facebook:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+.facebook:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.google:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+.google:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
+.login-right {
+  background-color: aliceblue;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+@media screen and (max-width: 1400px) {
+  .header > h1 {
+    font-size: 40px;
+  }
+  .facebook > p {
+    display: none;
+  }
+  .google > p {
+    display: none;
+  }
+}
+@media screen and (max-width: 1100px) {
+  .header > img {
+    display: none;
+  }
+  .header > h1 {
+    font-size: 30px;
+  }
+}
+@media screen and (max-width: 850px) {
+  .header > h1 {
+    font-size: 20px;
+  }
+  .header > p {
+    font-size: 14px;
+  }
+}
